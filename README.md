@@ -128,3 +128,20 @@ See the new [growlab app](/app) for your Raspberry Pi
 * Richard Gee's seeds2 repo for tweeting and capturing images: [rgee0/seeds2](https://github.com/rgee0/seeds2)
 * Sam Perrin's seed-viewer for viewing the images captured with phototimer [sam-perrin/seed-viewer](https://github.com/sam-perrin/seed-viewer)
 * Sander Vanhove's plant-monitor using Waylay: [SanderVanhove/plant-monitor](https://github.com/SanderVanhove/plant-monitor)
+
+## GPIO notes
+
+```bash
+# to list buses
+i2cdetect -l 
+# to list connections
+i2cdetect -y 1
+# test if modules are loaded
+lsmod | grep i2c_
+```
+
+[https://diyprojects.io/activate-i2c-bus-raspberry-pi-3-zero/#.YKhFQoNKiV4](Pin out descriptions)
+
+[https://www.waveshare.com/w/upload/7/75/BME280_Environmental_Sensor_User_Manual_EN.pdf](Waveshare BME280 manual)
+
+**You may need to buy soldering gear, if you buy a Pi Zero with GPIO pins that are not connected / cannot connect without soldering.**
