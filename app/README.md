@@ -27,6 +27,12 @@ Using `raspi-config`
 * Enable i2c under interfacing options
 * Change the password for the `pi` user
 
+### Consider updating your RPi
+
+* Update software: `sudo apt update && sudo apt upgrade -y`
+* Optionally, if having trouble with your RPi, try a firmware update: `sudo rpi-update`
+* Reboot afterwards: `sudo reboot`
+
 ### Getting started with the software
 
 Install git, tmux, Python and font pages
@@ -115,12 +121,18 @@ Edit the `config.json` file if needed and update the flip settings, and width an
 
 Capture a test photo and HTML page. You'll see the files generated in the `html` folder as `image.jpg` and `index.html`.
 
+Set the `SENSOR_TYPE` environment variable and run the app:
+
 ```bash
+# If you have no sensors
+export SENSOR_TYPE=none
+# If you have the BMP280
+export SENSOR_TYPE=bmp280
+# You can also add SENSOR_TYPE=value to your /etc/environment or ~/.bashrc file
+
+# the default is bme280
 python3 app.py
 ```
-
-* If you have no sensors, then run `SENSOR_TYPE=none`
-* If you have the BMP280, then prefix `SENSOR_TYPE=bmp280`
 
 ### Serve a preview with GitHub pages
 
@@ -179,8 +191,6 @@ sudo systemctl status growlab
 i2cdetect -l 
 # to list connections  (BME280 generally is on 0x76)
 i2cdetect -y 1
-# test if i2c is enabled
-lsmod | grep i2c
 ```
 
 ## GPIO Connector Tips
