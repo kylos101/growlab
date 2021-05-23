@@ -185,6 +185,6 @@ lsmod | grep i2c
 
 ## GPIO Connector Tips
 
-[https://diyprojects.io/activate-i2c-bus-raspberry-pi-3-zero/#.YKhFQoNKiV4](Pin outs for the GPIO connector)
+[Pin outs for the GPIO connector](https://diyprojects.io/activate-i2c-bus-raspberry-pi-3-zero/#.YKhFQoNKiV4)
 
 Depending on your gear, you may need to solder! For example, some Pi Zero kits come with a GPIO connector that does not snap in - you have to solder it.
