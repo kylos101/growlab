@@ -47,7 +47,10 @@
                         <tbody>
                             <tr>
                                 <td>Time</td>
-                                <td>21:52:37</td>
+<<<<<<< HEAD
+                                <td>03:30:09</td>
+=====                                <td>02:20:18</td>
+>>>>>>> a536b3ffd9eacd87bd49753fb5982db2a6e8d973
                             </tr>
                             <tr>
                                 <td>Temperature</td>
@@ -67,7 +70,11 @@
 
                 <h5>Latest image</h5>
                 <div style="width: 85%;">
-                            <img class="figure-img img-fluid rounded" src="./preview.jpg?uid=1621803165.3520908">
+<<<<<<< HEAD
+                            <img class="figure-img img-fluid rounded" src="./preview.jpg?uid=1621737018.585966">
+=======
+                            <img class="figure-img img-fluid rounded" src="./preview.jpg?uid=1621732826.9395041">
+>>>>>>> a536b3ffd9eacd87bd49753fb5982db2a6e8d973
                 </div>
             </div>
         </div>
