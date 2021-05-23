@@ -57,6 +57,7 @@ Get the roboto font:
 ```bash
 curl -sSL https://github.com/googlefonts/roboto/releases/download/v2.138/roboto-unhinted.zip -o roboto.zip
 unzip roboto.zip -d roboto
+rm roboto.zip
 ```
 
 Install Python modules with `pip3`:
@@ -72,13 +73,16 @@ Capture a test image to determine if you need a horizontal or vertical flip or n
 raspistill -o growlab.jpg
 
 # From your PC:
-scp pi@growlab.local:~/growlab.jpg Desktop/
+scp pi@growpi:~/growlab/app/growlab.jpg Desktop/
 
 # On a Mac:
 open Desktop/growlab.jpg
 
 # On a Linux desktop:
 xdg-open Desktop/growlab.jpg
+
+# On a Windows desktop:
+start %USERPROFILE%/Desktop/growlab.jpg
 ```
 
 If needed, test again with `-vf` or `-hf` to flip the image.
@@ -165,4 +169,22 @@ touch /etc/default/growlab
 sudo cp growlab.service /etc/systemd/system
 sudo systemctl enable growlab
 sudo systemctl start growlab
+sudo systemctl status growlab
 ```
+
+## Working with i2c
+
+```bash
+# to list buses
+i2cdetect -l 
+# to list connections  (BME280 generally is on 0x76)
+i2cdetect -y 1
+# test if i2c is enabled
+lsmod | grep i2c
+```
+
+## GPIO Connector Tips
+
+[https://diyprojects.io/activate-i2c-bus-raspberry-pi-3-zero/#.YKhFQoNKiV4](Pin outs for the GPIO connector)
+
+Depending on your gear, you may need to solder! For example, some Pi Zero kits come with a GPIO connector that does not snap in - you have to solder it.
