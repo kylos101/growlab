@@ -1,15 +1,17 @@
 #!/bin/bash
+mkdir -v growlab-live growlab-live/docs
+
+rm ./growlab-live/docs/preview.jpg -f
 python3 app.py
 
 export GIT_SSH_COMMAND="ssh -i `pwd`/.ssh/id_rsa"
 
-mkdir -v growlab-live growlab-live/docs
 cp html/* ./growlab-live/docs/
 cd growlab-live
 
 git add .
 
 git commit -s -m "Update images at `date`"
-git pull origin master --rebase
+git pull origin master
 git push origin master
 
