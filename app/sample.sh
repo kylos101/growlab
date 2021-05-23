@@ -13,5 +13,5 @@ git add .
 
 git commit -s -m "Update images at `date`"
 git pull origin master
-git push origin master
+git push
 
