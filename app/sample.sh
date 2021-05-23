@@ -3,6 +3,7 @@ python3 app.py
 
 export GIT_SSH_COMMAND="ssh -i `pwd`/.ssh/id_rsa"
 
+mkdir -v growlab-live growlab-live/docs
 cp html/* ./growlab-live/docs/
 cd growlab-live
 
