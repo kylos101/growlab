@@ -165,7 +165,7 @@ while [ true ] ; do ./sample.sh && echo "waiting 10 minutes" && sleep 600 ; done
 Install the systemd service:
 
 ```bash
-touch /etc/default/growlab
+sudo touch /etc/default/growlab
 sudo cp growlab.service /etc/systemd/system
 sudo systemctl enable growlab
 sudo systemctl start growlab
