@@ -203,8 +203,6 @@ then change for the sensor you have, ie. if you have BMP280 change for `Environm
 Install the systemd service:
 
 ```bash
-sudo touch /etc/default/growlab
-# Add your desired SENSOR_TYPE=value to /etc/default/growlab
 chmod +x app.py
 sudo cp growlab.service /etc/systemd/system
 sudo systemctl enable growlab
