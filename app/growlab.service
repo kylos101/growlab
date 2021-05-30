@@ -8,7 +8,7 @@ Restart=always
 RestartSec=600
 StartLimitInterval=0
 EnvironmentFile=/etc/default/growlab
-ExecStart=/bin/bash /home/pi/growlab/app/sample.sh
+ExecStart=/home/pi/growlab/app/sample.sh
 
 [Install]
 WantedBy=multi-user.target
