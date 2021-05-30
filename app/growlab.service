@@ -3,6 +3,8 @@ Description=Growlab
 After=network.target
 
 [Service]
+User=pi
+Group=pi
 Type=simple
 Restart=always
 RestartSec=600
