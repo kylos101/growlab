@@ -5,8 +5,7 @@ python3 app.py
 
 export GIT_SSH_COMMAND="ssh -i `pwd`/.ssh/id_rsa"
 
-cp html/* ./growlab-live/docs/
-cd growlab-live
+cp ${HOME}/growlab/app/html/* ${HOME}/growlab/docs/
 
 sudo pi
 

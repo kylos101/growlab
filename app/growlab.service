@@ -7,8 +7,9 @@ Type=simple
 Restart=always
 RestartSec=600
 StartLimitInterval=0
-EnvironmentFile=/etc/default/growlab
-ExecStart=/home/pi/growlab/app/sample.sh
+Environment="SENSOR_TYPE=none"
+WorkingDirectory=/home/pi/growlab/app
+ExecStart=/home/pi/growlab/app/app.py
 
 [Install]
 WantedBy=multi-user.target
