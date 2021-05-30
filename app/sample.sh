@@ -1,5 +1,4 @@
 #!/bin/bash
-mkdir -vp growlab-live/docs
 
 rm ./growlab-live/docs/preview.jpg -f
 python3 app.py
