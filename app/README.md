@@ -15,6 +15,8 @@ See also: [app roadmap](https://github.com/alexellis/growlab/issues/15)
 * You'll need a Raspberry Pi Zero W or any other Raspberry Pi.
 * An RPi camera connected - any version
 * A Bosch BME280 or BMP280 sensor connected to GND, VCC SDL and SCL.
+* New to GPIO or i2c? Checkout the [onboarding guide](onboarding.md).
+* What materials are technicians using? Refer to the [sample materials](materials.md).
 
 ![How to connect the sensor over i2c](sensor-i2c.png)
 > How to connect the sensor over i2c
@@ -128,7 +130,6 @@ Set the `SENSOR_TYPE` environment variable and run the app:
 export SENSOR_TYPE=none
 # If you have the BMP280
 export SENSOR_TYPE=bmp280
-# You can also add SENSOR_TYPE=value to your /etc/environment or ~/.bashrc file
 
 # the default is bme280
 python3 app.py
@@ -162,13 +163,15 @@ Now run the sample.sh bash script. Feel free to view its contents to see how it 
 
 ```bash
 cd growlab/app
-
+# a folder for storing live preview content
+mkdir -vp growlab-live/docs
 ./sample.sh
 ```
 
 You can also put this into a loop to run every 10 minutes:
 
 ```bash
+# You can add SENSOR_TYPE=value to a file in /etc/environment or ~/.bashrc file
 while [ true ] ; do ./sample.sh && echo "waiting 10 minutes" && sleep 600 ; done 
 ```
 
@@ -178,23 +181,18 @@ Install the systemd service:
 
 ```bash
 sudo touch /etc/default/growlab
+# Add your desired SENSOR_TYPE=value to /etc/default/growlab
 sudo cp growlab.service /etc/systemd/system
 sudo systemctl enable growlab
 sudo systemctl start growlab
 sudo systemctl status growlab
+journalctl | grep growlab
 ```
 
-## Working with i2c
+To remove the service:
 
 ```bash
-# to list buses
-i2cdetect -l 
-# to list connections  (BME280 generally is on 0x76)
-i2cdetect -y 1
+sudo systemctl stop growlab
+sudo systemctl disable growlab
+sudo systemctl status growlab
 ```
-
-## GPIO Connector Tips
-
-[Pin outs for the GPIO connector](https://diyprojects.io/activate-i2c-bus-raspberry-pi-3-zero/#.YKhFQoNKiV4)
-
-Depending on your gear, you may need to solder! For example, some Pi Zero kits come with a GPIO connector that does not snap in - you have to solder it.
