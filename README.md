@@ -162,4 +162,3 @@ Here's a sample from 9th-22nd April you can watch on YouTube:
 * Richard Gee's seeds2 repo for tweeting and capturing images: [rgee0/seeds2](https://github.com/rgee0/seeds2)
 * Sam Perrin's seed-viewer for viewing the images captured with phototimer [sam-perrin/seed-viewer](https://github.com/sam-perrin/seed-viewer)
 * Sander Vanhove's plant-monitor using Waylay: [SanderVanhove/plant-monitor](https://github.com/SanderVanhove/plant-monitor)
-

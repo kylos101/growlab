@@ -81,7 +81,7 @@ Capture a test image to determine if you need a horizontal or vertical flip or n
 raspistill -o growlab.jpg
 
 # From your PC:
-scp pi@growpi:~/growlab/app/growlab.jpg Desktop/
+scp pi@growpi.local:~/growlab/app/growlab.jpg Desktop/
 
 # On a Mac:
 open Desktop/growlab.jpg
