@@ -1,13 +1,12 @@
 #!/bin/bash
-
-rm ./growlab-live/docs/preview.jpg -f
 python3 app.py
 
 export GIT_SSH_COMMAND="ssh -i `pwd`/.ssh/id_rsa"
 
 cp ${HOME}/growlab/app/html/* ${HOME}/growlab/docs/
 
-sudo pi
+# uncomment me if running as a service
+# sudo pi
 
 git add .
 

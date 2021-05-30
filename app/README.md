@@ -183,10 +183,9 @@ Go to the repo settings and add the deploy key and check *Allow write access*
 Now run the sample.sh bash script. Feel free to view its contents to see how it works
 
 ```bash
-mkdir -p docs
-cd growlab/app
 # a folder for storing live preview content
-mkdir -vp growlab-live/docs
+mkdir -vp growlab/docs
+cd growlab/app
 ./sample.sh
 ```
 
