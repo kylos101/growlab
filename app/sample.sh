@@ -6,7 +6,7 @@ export GIT_SSH_COMMAND="ssh -i `pwd`/.ssh/id_rsa"
 cp ${HOME}/growlab/app/html/* ${HOME}/growlab/docs/
 
 # uncomment me if running as a service
-# sudo pi
+sudo pi
 
 git add .
 
