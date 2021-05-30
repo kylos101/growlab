@@ -5,10 +5,10 @@ After=network.target
 [Service]
 Type=simple
 Restart=always
-RestartSec=30
+RestartSec=600
 StartLimitInterval=0
 EnvironmentFile=/etc/default/growlab
-ExecStart=/home/pi/growlab/app/app.py
+ExecStart=/bin/bash /home/pi/growlab/app/sample.sh
 
 [Install]
 WantedBy=multi-user.target
