@@ -7,7 +7,7 @@ Type=simple
 Restart=always
 RestartSec=600
 StartLimitInterval=0
-Environment="SENSOR_TYPE=none"
+Environment="SENSOR_TYPE=bme280"
 WorkingDirectory=/home/pi/growlab/app
 ExecStart=/home/pi/growlab/app/app.py
 
