@@ -9,7 +9,7 @@ RestartSec=600
 StartLimitInterval=0
 Environment="SENSOR_TYPE=none"
 WorkingDirectory=/home/pi/growlab/app
-ExecStart=/home/pi/growlab/app/app.py
+ExecStart=/home/pi/growlab/app/sample.py
 
 [Install]
 WantedBy=multi-user.target
