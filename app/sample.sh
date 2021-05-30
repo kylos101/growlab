@@ -9,9 +9,8 @@ cp ${HOME}/growlab/app/html/* ${HOME}/growlab/docs/
 
 sudo pi
 
-#git add .
+git add .
 
-#git commit -s -m "Update images at `date`"
-#git pull origin master
-#git push
-
+git commit -s -m "Update images at `date`"
+git pull origin master
+git push
